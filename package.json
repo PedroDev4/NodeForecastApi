@@ -11,6 +11,8 @@
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "start": "yarn build && node dist/src/index.js",
+    "style:check": "prettier --check ./src/**/*.ts ./test/**/*.ts ",
+    "style:fix": "prettier --write ./src/**/*.ts ./test/**/*.ts ",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/index.ts",
     "test:functional": "jest --projects ./test --runInBand"
   },
@@ -25,6 +27,7 @@
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.28.0",
     "jest": "^27.0.4",
+    "prettier": "^2.3.2",
     "supertest": "^6.1.3",
     "ts-jest": "^27.0.3",
     "ts-node-dev": "^1.1.6",
